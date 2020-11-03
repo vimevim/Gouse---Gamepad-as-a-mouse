@@ -97,6 +97,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="arrows.fw.ico" />
+    <Content Include="Resources\OpenJigWare.dll" />
     <None Include="Resources\arrows.fw.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
