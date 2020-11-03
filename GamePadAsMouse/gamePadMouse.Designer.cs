@@ -77,19 +77,19 @@
             this.showToolStripMenuItem,
             this.closeToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(104, 48);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(140, 48);
             // 
             // showToolStripMenuItem
             // 
             this.showToolStripMenuItem.Name = "showToolStripMenuItem";
-            this.showToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
-            this.showToolStripMenuItem.Text = "Show";
+            this.showToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.showToolStripMenuItem.Text = "Show / Hide";
             this.showToolStripMenuItem.Click += new System.EventHandler(this.showToolStripMenuItem_Click);
             // 
             // closeToolStripMenuItem
             // 
             this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
-            this.closeToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
+            this.closeToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.closeToolStripMenuItem.Text = "Close";
             this.closeToolStripMenuItem.Click += new System.EventHandler(this.closeToolStripMenuItem_Click);
             // 
@@ -125,7 +125,7 @@
             // leftStickTrackbar
             // 
             this.leftStickTrackbar.Location = new System.Drawing.Point(210, 89);
-            this.leftStickTrackbar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.leftStickTrackbar.Margin = new System.Windows.Forms.Padding(2);
             this.leftStickTrackbar.Minimum = 1;
             this.leftStickTrackbar.Name = "leftStickTrackbar";
             this.leftStickTrackbar.Size = new System.Drawing.Size(150, 45);
@@ -158,7 +158,7 @@
             // rightStickTrackbar
             // 
             this.rightStickTrackbar.Location = new System.Drawing.Point(210, 146);
-            this.rightStickTrackbar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rightStickTrackbar.Margin = new System.Windows.Forms.Padding(2);
             this.rightStickTrackbar.Minimum = 1;
             this.rightStickTrackbar.Name = "rightStickTrackbar";
             this.rightStickTrackbar.Size = new System.Drawing.Size(150, 45);
@@ -170,7 +170,7 @@
             // 
             this.panelGuider.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(218)))), ((int)(((byte)(246)))));
             this.panelGuider.Location = new System.Drawing.Point(0, 0);
-            this.panelGuider.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelGuider.Margin = new System.Windows.Forms.Padding(2);
             this.panelGuider.Name = "panelGuider";
             this.panelGuider.Size = new System.Drawing.Size(600, 41);
             this.panelGuider.TabIndex = 14;
@@ -204,7 +204,7 @@
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(218)))), ((int)(((byte)(246)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Location = new System.Drawing.Point(476, 124);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(56, 30);
             this.button1.TabIndex = 17;
@@ -217,7 +217,7 @@
             this.stopOrStart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(218)))), ((int)(((byte)(246)))));
             this.stopOrStart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.stopOrStart.Location = new System.Drawing.Point(476, 84);
-            this.stopOrStart.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.stopOrStart.Margin = new System.Windows.Forms.Padding(2);
             this.stopOrStart.Name = "stopOrStart";
             this.stopOrStart.Size = new System.Drawing.Size(56, 26);
             this.stopOrStart.TabIndex = 18;
@@ -230,7 +230,7 @@
             this.save.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(218)))), ((int)(((byte)(246)))));
             this.save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.save.Location = new System.Drawing.Point(476, 158);
-            this.save.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.save.Margin = new System.Windows.Forms.Padding(2);
             this.save.Name = "save";
             this.save.Size = new System.Drawing.Size(56, 33);
             this.save.TabIndex = 18;
@@ -242,7 +242,7 @@
             // 
             this.runAtStartUp.AutoSize = true;
             this.runAtStartUp.Location = new System.Drawing.Point(464, 326);
-            this.runAtStartUp.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.runAtStartUp.Margin = new System.Windows.Forms.Padding(2);
             this.runAtStartUp.Name = "runAtStartUp";
             this.runAtStartUp.Size = new System.Drawing.Size(101, 17);
             this.runAtStartUp.TabIndex = 19;
@@ -286,10 +286,9 @@
             this.Controls.Add(this.label2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "gamePadMouse";
             this.ShowInTaskbar = false;
-            this.Text = " ";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.gamePadMouse_Load);
             this.contextMenuStrip1.ResumeLayout(false);

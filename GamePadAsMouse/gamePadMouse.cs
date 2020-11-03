@@ -28,6 +28,8 @@ namespace GamePadAsMouse
             rightStickValue.Text = "x" + (11 - ayarlar.Default.slow).ToString();
             rightStickTrackbar.Value = ayarlar.Default.slow;
             joystickHook.Enabled = true;
+
+            //run at sturtup checked controll
             try
             {
                 RegistryKey key = Registry.CurrentUser.OpenSubKey(@"Software\Microsoft\Windows\CurrentVersion\Run", true);
@@ -65,7 +67,8 @@ namespace GamePadAsMouse
                 return param;
             }
         }
-        //move it down
+
+        //pencereyi hareket ettirme fonksiyonları
         int panelGuiderLeft, panelGuiderTop;
         private void panelGuider_MouseDown(object sender, MouseEventArgs e)
         {
@@ -84,12 +87,13 @@ namespace GamePadAsMouse
             }
         }
 
+        //sol joystick için hız ayarı yapıyoruz
         private void leftStickTrackbar_Scroll(object sender, EventArgs e)
         {
             ayarlar.Default.fast = leftStickTrackbar.Value;
             leftStickValue.Text = "x" + (11 - leftStickTrackbar.Value).ToString();
         }
-
+        //sağ joystick için hız ayarı yapıyoruz
         private void rightStickTrackbar_Scroll(object sender, EventArgs e)
         {
             ayarlar.Default.slow = rightStickTrackbar.Value;
@@ -273,7 +277,7 @@ namespace GamePadAsMouse
                 {
                     labelDegeri = "X";
                     SendMessageW(this.Handle, WM_APPCOMMAND, this.Handle, (IntPtr)APPCOMMAND_VOLUME_DOWN);
-                    //vol-down
+                    //volume-down
 
                 }
                 if (m_CJoy.IsDown(Ojw.CJoystick.PadKey.Button2) == true)
@@ -309,6 +313,7 @@ namespace GamePadAsMouse
                     SendKeys.Send("{ENTER}");
                 }
 
+                //Fare tıklamasını tek seferlik hale getiren kod bloğu
                 label1.Text = labelDegeri;
                 if (m_CJoy.IsDown(Ojw.CJoystick.PadKey.Button11) == true)
                 {
@@ -344,12 +349,14 @@ namespace GamePadAsMouse
                 }
             }
         }
+
+        //left joystick mouse movement
         public void MouseMoveLeft(int posx, int posy)
         {
             Cursor.Position = new Point(Cursor.Position.X + posx / ayarlar.Default.fast, Cursor.Position.Y + posy / ayarlar.Default.fast);
             //Cursor.Clip = new Rectangle(Screen.PrimaryScreen.WorkingArea.Location, Screen.PrimaryScreen.WorkingArea.Size);
         }
-
+        //right joystick mouse movement
         public void MouseMoveRight(int posx, int posy)
         {
             Cursor.Position = new Point(Cursor.Position.X + posx / ayarlar.Default.slow, Cursor.Position.Y + posy / ayarlar.Default.slow);
@@ -371,6 +378,7 @@ namespace GamePadAsMouse
             ayarlar.Default.Save();
         }
 
+        //run at startup checkedchanged
         private void runAtStartUp_CheckedChanged(object sender, EventArgs e)
         {
             if (runAtStartUp.Checked)
@@ -395,6 +403,7 @@ namespace GamePadAsMouse
             Application.Exit();
         }
 
+        //switcher kodu
         private void stopOrStart_Click(object sender, EventArgs e)
         {
             if (stopOrStart.Text == "STOP")
